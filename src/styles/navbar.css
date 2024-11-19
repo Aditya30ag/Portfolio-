@@ -1,0 +1,204 @@
+.navbar{
+    padding: 10px 20px;
+    align-items: stretch;
+    justify-content: space-between;
+    background: var(--bg-secondary);
+    border-bottom: solid .5px var(--border-primary);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 20px;
+}
+
+.navbar .tabs-group .tab{
+    padding: 5px 15px;
+    border-radius: 10px;
+    color: var(--muted-foreground);
+    transition: var(--transition);
+    cursor: pointer;
+    border: solid .5px transparent;
+}
+
+.navbar .tabs-group .tab:hover{
+    color: var(--foreground);
+}
+
+.navbar .tabs-group .tab.active{
+    border-color: var(--border-primary);
+    background: var(--bg-accent);
+}
+
+.navbar .buttons{
+    gap: 20px;
+}
+
+.navbar .menu-btn{
+    display: none;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 110;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    background: rgba(1,1,1,0.5);
+}
+
+@media (max-width:1210px){
+    .navbar .handles-container{
+        display: none;
+    }
+}
+
+@media (max-width:1050){
+    .navbar .services-btn{
+        display: none;
+    }
+}
+
+@media (max-width:930px){
+    .navbar .sidebar{
+        position: fixed;
+        top: 0;
+        left: -100%;
+        height: 100%;
+        width: 100%;
+        max-width: 320px;
+        min-height: 100vh;
+        z-index: 150;
+        background: var(--bg-secondary);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 20px;
+        transition: var(--transition);
+    }
+    .navbar .sidebar.visible{
+        left: 0;
+    }
+    .navbar .menu-btn{
+        display: flex;
+    }
+}
+
+@media (max-width:400px){
+    .navbar .contact-btn{
+        display: none;
+    }
+} 
+/* Google-inspired animated gradient border */
+.google-dynamic-border {
+    position: relative;
+    padding: 2px 2px;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-radius: 20px;
+  }
+  
+  /* Before pseudo-element for the animated border effect */
+  .google-dynamic-border::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      90deg,
+      #ea4335,
+      #fbbc05,
+      #34a853,
+      #4285f4,
+      #ea4335
+    );
+    background-size: 400%;
+    z-index: -1;
+    border-radius: inherit;
+    animation: googleBorderAnimation 6s linear infinite;
+  }
+  
+  /* To create a gap between border and button content */
+  .google-dynamic-border > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animation for the moving gradient */
+  @keyframes googleBorderAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Optional hover effect */
+  .google-dynamic-border:hover {
+    transform: translateY(-2px);
+  }
+  
+  /* Google-inspired animated gradient border button */
+.google-dynamic-border-btn {
+    position: relative;
+    padding: 2px 2px;
+    overflow: hidden;
+    z-index: 1;
+    font-weight: 500;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 20px;
+  }
+  
+  /* Before pseudo-element for the animated border effect */
+  .google-dynamic-border-btn::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(
+      90deg,
+      #ea4335,
+      #fbbc05,
+      #34a853,
+      #4285f4,
+      #ea4335
+    );
+    background-size: 400%;
+    z-index: -1;
+    border-radius: inherit;
+    animation: googleBorderAnimation 6s linear infinite;
+  }
+  
+  /* To create a gap between border and button content */
+  .google-dynamic-border-btn > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Animation for the moving gradient */
+  @keyframes googleBorderAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  /* Optional hover effect */
+  .google-dynamic-border-btn:hover {
+    transform: translateY(-2px);
+  }
+  
