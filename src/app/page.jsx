@@ -9,14 +9,13 @@ import '../styles/index.css';
 import Homepage from "@/components/Homepage";
 import About from "@/components/About";
 import { motion, useScroll, useSpring } from 'framer-motion';
-import Achievement from "@/components/Achievements";
 import Achievement1 from "@/components/Achievements1";
 import Slider from "@/components/Slider";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
   const [tabsData, settabsData] = useState([]);
-  const [contactData, setcontactData] = useState([]);
+  const [servicesData, setservicesData] = useState([]);
   const [footerData, setfooterData] = useState([]);
 
   // Add scroll progress indicator
@@ -33,9 +32,8 @@ export default function Home() {
         const response = await fetch(publicPath + "/data/data.json");
         const data = await response.json();
         settabsData(data[0]);
-        console.log(data[0]);
-        setcontactData(data[3])
-        setfooterData(data[4]);
+        setservicesData(data[1])
+        setfooterData(data[2]);
       } catch {
         console.log("hllo")
       }
@@ -104,13 +102,9 @@ export default function Home() {
       </motion.div>
 
       <motion.section
-        initial={{ opacity: 0, scale: 0.9, rotateX: -20 }}
-        whileInView={{ opacity: 1, scale: 1, rotateX: 0 }}
-        transition={{ 
-          duration: 0.8,
-          type: "spring",
-          stiffness: 100
-        }}
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.2 }}
         viewport={{ once: true }}
       >
         <About />
@@ -135,7 +129,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <Services />
+        <Services services={servicesData}/>
       </motion.section>
 
       <motion.section
@@ -161,7 +155,7 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <Footer contactOptions={contactData} footer={footerData} />
+        <Footer footer={footerData} />
       </motion.footer>
     </>
   );

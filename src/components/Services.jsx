@@ -1,8 +1,10 @@
 import React from 'react';
-import { services } from '@/app/sources';
-import { Link as ScrollLink } from 'react-scroll';
 
-const Services = () => {
+import Image from 'next/image';
+
+const Services = ({services}) => {
+  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
+
   // Dark theme colors
   const darkColors = ['#6366F1', '#8B5CF6', '#EC4899', '#F43F5E'];
 
@@ -54,22 +56,17 @@ const Services = () => {
       id="services"
       className="relative py-20 overflow-hidden bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift"
       style={{
-        background:
-          'linear-gradient(to bottom, rgb(3, 7, 18), rgb(17, 24, 39))', // gray-950 to gray-900
+        background: 'linear-gradient(to bottom, rgb(3, 7, 18), rgb(17, 24, 39))',
       }}
     >
       <style>{styles}</style>
 
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-5 overflow-hidden bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift">
-        
       </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
-        <h1 className="mb-10 text-4xl font-bold text-center">
-          <div className="bg-gradient-to-r from-[#6366F1] to-[#F43F5E] bg-clip-text text-transparent">
-            Case Studies
-          </div>
+        <h1 className="mb-10 text-4xl font-bold text-center relative">
           <span className="bg-gradient-to-r from-[#6366F1] to-[#F43F5E] bg-clip-text text-transparent inline-block">
             Project Work
           </span>
@@ -82,8 +79,15 @@ const Services = () => {
               key={index}
               className="service-card bg-gray-900 border border-gray-800 rounded-lg shadow-[#6366F1_-8px_10px_0px_2px]"
             >
-              <div className="h-16 flex items-center justify-center mt-4 text-white">
-                {service.icon}
+              <div className="relative h-48 w-full flex items-center justify-center mt-4 p-4">
+                <div className="relative w-full h-full"> {/* Fixed size container for image */}
+                  <Image
+                    src={publicPath + service.icon}
+                    alt={service.name}
+                    fill
+                    className="object-contain transition-transform duration-300 filter brightness-100"
+                  />
+                </div>
               </div>
 
               <div className="p-6">
@@ -94,15 +98,16 @@ const Services = () => {
 
                 <div className="flex justify-between items-center">
                   <button className="px-4 py-2 text-sm font-medium text-white bg-transparent border-2 border-[#6366F1] rounded-md hover:bg-[#6366F1] transition-colors">
-                    Read More
+                    
                   </button>
-                  <ScrollLink
-                    to="contact"
+                  <a
+                    href={service.link}
                     smooth
-                    className="px-4 py-2 text-sm font-medium text-white bg-[#6366F1] rounded-md hover:bg-[#8B5CF6] transition-colors"
+                    target='_blank'
+                    className="px-4 py-2 text-sm font-medium text-white bg-[#6366F1] rounded-md hover:bg-[#8B5CF6] transition-colors cursor-pointer"
                   >
-                    Get Started
-                  </ScrollLink>
+                    Get Code
+                  </a>
                 </div>
               </div>
             </div>

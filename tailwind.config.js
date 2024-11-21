@@ -21,7 +21,7 @@ module.exports = {
                 filter: 'blur(30px)',
                 transform: 'translate(-10%, 10%) skew(-12deg)',
               },
-        },
+        }
       },
     },
   },

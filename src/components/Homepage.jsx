@@ -65,7 +65,7 @@ export default function Homepage () {
         Student at Bennett University with strong technical skills anchored on extensive engineering coursework and a special focus on Front-end Development and DSA.
       </h4>
     </div>
-    <div id="gooey" className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[5%] left-[60%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+    <div id="gooey" className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[5%] left-[58%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
       
     </div>
     <div style={{width:"50%",zIndex:"200"}}>

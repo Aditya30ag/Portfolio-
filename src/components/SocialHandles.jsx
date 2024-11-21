@@ -1,6 +1,6 @@
 import React from 'react'
 import '../styles/socialHandles.css';
-import { FaInstagram, FaXTwitter, FaYoutube,FaLinkedin} from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaGithub ,FaLinkedin} from "react-icons/fa6";
 
 const SocialHandles = () => {
   return (
@@ -20,12 +20,12 @@ const socialHandles = [
   {
     name:"Instagram",
     icon:<FaInstagram />,
-    link:"https://www.instagram.com/",
+    link:"https://www.instagram.com/_.aditya_agrawal_/",
   },
   {
     name:"Linkedin",
     icon:<FaLinkedin/>,
-    link:"https://www.linkedin.com/in/devanshi-jaiswal-b83774217/",
+    link:"https://www.linkedin.com/in/aditya-agrawal-527150303/",
   },
   {
     name:"Twitter",
@@ -34,8 +34,8 @@ const socialHandles = [
   },
   {
     name:"Youtube",
-    icon:<FaYoutube/>,
-    link:"httpshttps://www.youtube.com/://www.youtube.com/channel/UCEtnsPZQEd0l1tbr_nDQd5Q?sub_confirmation=1",
+    icon:<FaGithub/>,
+    link:"https://github.com/Aditya30ag",
   },
 ];
 

@@ -33,15 +33,19 @@ const About = () => {
   const education = [
     {
       institution: "BENNETT UNIVERSITY",
+      note:"UNDER-GRADUATION (B.Tech)",
       degree: "Bachelor of Science in Computer Science",
       year: "2024-2028",
-      description: "Major in Software Engineering"
+      description: "Major in Software Engineering",
+      description1: ""
     },
     {
-      institution: "Hacker Rank",
-      degree: "JavaScript Skills Certification",
-      year: "2024",
-      description: "MERN Stack Specialization"
+      institution: "ST Dominic SR SEC School,Mathura",
+      note:"CLASS-12",
+      degree: "Percentage - 85%",
+      year: "2023",
+      description: "Had exemplary academic track record with multiple academic excellence award.",
+      description1:"Represented school on multiple platforms including on national level."
     }
   ];
   const experience = [
@@ -62,14 +66,8 @@ const About = () => {
   return (
     <section id="about" className="py-20 relative overflow-hidden flex justify-center items-center" style={{zIndex:"200"}}>
       <div className="max-w-6xl mx-auto px-4 relative" ref={ref}>
-        <motion.div
-          variants={{
-            hidden: { opacity: 0, y: 75 },
-            visible: { opacity: 1, y: 0 }
-          }}
-          initial="hidden"
-          animate={mainControls}
-          transition={{ duration: 0.5, delay: 0.25 }}
+        <div
+         
           className="text-center mb-16"
         >
           <h1 className="text-5xl font-bold mb-4">
@@ -107,35 +105,36 @@ const About = () => {
                   : 'bg-gray-800 text-gray-300 hover:bg-gray-700'
               }`}
             >
-              Experience
+              Hackathons
             </button>
           </div>
-        </motion.div>
+        </div>
           <div className="container-fluid bg-gradient-to-br from-gray-900 to-gray-800 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
-            {activeTab === 'skills' && (
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+          {activeTab === 'skills' && (
+            <div className="space-y-6">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 max-w-[1200px] w-full">
                 {skills.map((skill, index) => (
                   <motion.div
-                    key={skill.name}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className={`relative group cursor-pointer`}
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: index * 0.2 }}
+                    className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-gray-700"
                     onMouseEnter={() => setHoveredSkill(skill.name)}
                     onMouseLeave={() => setHoveredSkill(null)}
                   >
                     <div className={`
-                      rounded-xl p-3 h-24 w-full
+                      rounded-xl p-3 h-24 w-full max-w-[200px]
                       bg-gradient-to-br ${skill.gradient}
                       transform transition-all duration-300
                       ${hoveredSkill === skill.name ? 'scale-105' : 'scale-100'}
                       hover:shadow-lg hover:shadow-${skill.gradient.split('-')[2]}-500/20
                     `}>
-                      <div className="flex flex-col items-center justify-center h-full space-y-2">
+                      <div className="flex flex-col items-center justify-center h-full w-full">
                         <div className="relative h-10 w-10 overflow-hidden">
                           <Image
                             src={publicPath + skill.image}
-                            alt={skill.name}                            
+                            alt={skill.name}
                             fill
                             className="transition-transform duration-300 filter brightness-100"
                           />
@@ -155,7 +154,8 @@ const About = () => {
                   </motion.div>
                 ))}
               </div>
-            )}
+            </div>
+          )}
 
             {activeTab === 'education' && (
               <div className="space-y-6">
@@ -170,9 +170,11 @@ const About = () => {
                     <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
                       {edu.institution}
                     </h3>
+                    <p className="text-lg font-semibold text-gray-200 mt-2">{edu.note}</p>
                     <p className="text-lg font-semibold text-gray-200 mt-2">{edu.degree}</p>
                     <p className="text-sm text-indigo-400 mt-1">{edu.year}</p>
                     <p className="text-gray-400 mt-2">{edu.description}</p>
+                    <p className="text-gray-400 mt-2">{edu.description1}</p>
                   </motion.div>
                 ))}
               </div>
@@ -191,9 +193,11 @@ const About = () => {
                     <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
                       {edu.institution}
                     </h3>
+                    
                     <p className="text-lg font-semibold text-gray-200 mt-2">{edu.degree}</p>
                     <p className="text-sm text-indigo-400 mt-1">{edu.year}</p>
                     <p className="text-gray-400 mt-2">{edu.description}</p>
+
                   </motion.div>
                 ))}
               </div>
