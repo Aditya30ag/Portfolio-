@@ -29,7 +29,7 @@ export default function Home() {
   useEffect(() => {
     const fetchtabsData = async () => {
       try {
-        const response = await fetch(publicPath + "/data/data.json");
+        const response = await fetch(publicPath+"/data/data.json");
         const data = await response.json();
         settabsData(data[0]);
         setservicesData(data[1])
