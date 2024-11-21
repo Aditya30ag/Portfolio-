@@ -56,11 +56,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-400 to-indigo-400 text-transparent bg-clip-text">
-            Let's Create Something Amazing Together
+            {`Let's Create Something Amazing Together`}
           </h2>
           <p className="text-gray-400 text-xl max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. Drop me a message 
-            and let's build something extraordinary.
+            {`Have a project in mind? I'd love to hear about it. Drop me a message 
+            and let's build something extraordinary.`}
           </p>
         </motion.div>
 
