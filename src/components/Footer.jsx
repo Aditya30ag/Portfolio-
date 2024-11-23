@@ -3,7 +3,25 @@ import Image from "next/image";
 import SocialHandles from "./SocialHandles";
 import { Link } from 'react-scroll';
 
-const Footer = ({footer}) => {
+const Footer = () => {
+  const footer=[
+    {
+      "title": "Explore",
+      "routes": [
+        {"name": "Home", "id": "hero"},
+        {"name": "About Us", "id": "about"},
+        {"name": "Services", "id": "services"}
+      ]
+    },
+    {
+        "title":"Quick Links",
+        "routes":[
+          {"name":"Privacy Policy"},
+          {"name":"Terms and Conditions"},
+          {"name":"Cookie Policy"}
+        ]
+      }
+  ]
   return (
     <footer className="bg-black py-6 px-4 relative overflow-hidden">
       {/* Dark theme colored bar at the top */}

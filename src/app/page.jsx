@@ -14,9 +14,7 @@ import Slider from "@/components/Slider";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
-  const [tabsData, settabsData] = useState([]);
-  const [servicesData, setservicesData] = useState([]);
-  const [footerData, setfooterData] = useState([]);
+ 
 
   // Add scroll progress indicator
   const { scrollYProgress } = useScroll();
@@ -25,22 +23,6 @@ export default function Home() {
     damping: 30,
     restDelta: 0.001
   });
-
-  useEffect(() => {
-    const fetchtabsData = async () => {
-      try {
-        const response = await fetch(publicPath+"/data/data.json");
-        const data = await response.json();
-        settabsData(data[0]);
-        setservicesData(data[1])
-        setfooterData(data[2]);
-      } catch {
-        console.log("hllo")
-      }
-    };
-
-    fetchtabsData();
-  }, []);
 
   // Animation variants for staggered children
   const containerVariants = {
@@ -76,7 +58,7 @@ export default function Home() {
         transition={{ duration: 0.6, type: "spring", stiffness: 100 }}
         viewport={{ once: true }}
       >
-        <Navbar tabs={tabsData} />
+        <Navbar/>
       </motion.nav>
 
       <motion.section
@@ -129,7 +111,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
-        <Services services={servicesData}/>
+        <Services/>
       </motion.section>
 
       <motion.section
@@ -155,7 +137,7 @@ export default function Home() {
         }}
         viewport={{ once: true }}
       >
-        <Footer footer={footerData} />
+        <Footer/>
       </motion.footer>
     </>
   );

@@ -16,7 +16,13 @@ const CloseIcon = () => (
   </svg>
 );
 
-const Navbar = ({ tabs }) => {
+const Navbar = () => {
+  const tabs=[
+      
+    { "name": "Home", "id": "home" },
+    { "name": "About Me", "id": "about" },
+    { "name": "Projects", "id": "services" }
+  ]
   const [openSidebar, setOpenSidebar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState(tabs[0]?.id);
