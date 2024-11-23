@@ -57,7 +57,7 @@ const About = () => {
     },
     {
       institution: "GFG HackFest",
-      degree: "4th Rank in GFG HackFest",
+      degree: "RANK-4th",
       year: "2024",
       description: "Role-MERN Stack"
     }
