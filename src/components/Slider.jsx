@@ -53,7 +53,7 @@ const Slider = () => {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || '';
 
   return (
-    <div className="w-full bg-gray-50 py-12 overflow-hidden" style={{ zIndex: "200", borderRadius: "50px", opacity: 0.9 ,marginTop:"40px"}}> 
+    <div className="w-full bg-gray-50 py-12 overflow-hidden" style={{ zIndex: "2000", borderRadius: "50px", opacity: 0.9 ,marginTop:"40px"}}> 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <style jsx>{`

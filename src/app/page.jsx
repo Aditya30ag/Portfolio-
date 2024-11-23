@@ -9,7 +9,6 @@ import '../styles/index.css';
 import Homepage from "@/components/Homepage";
 import About from "@/components/About";
 import { motion, useScroll, useSpring } from 'framer-motion';
-import Achievement1 from "@/components/Achievements1";
 import Slider from "@/components/Slider";
 
 export default function Home() {
@@ -73,15 +72,6 @@ export default function Home() {
       >
         <Homepage />
       </motion.section>
-
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-      >
-        <Achievement1 />
-      </motion.div>
 
       <motion.section
         initial={{ opacity: 0, scale: 0.95 }}

@@ -127,6 +127,29 @@ const About = () => {
       className="py-20 relative overflow-hidden flex justify-center items-center"
       style={{ zIndex: "200" }}
     >
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift"></div>
+      <div className="absolute inset-0">
+        {[...Array(20)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-1 h-1 bg-white rounded-full"
+            initial={{
+              x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
+              y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
+              opacity: Math.random() * 0.7 + 0.4,
+            }}
+            animate={{
+              y: [null, Math.random() * -100],
+              opacity: [null, 0]
+            }}
+            transition={{
+              duration: Math.random() * 5 + 5,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          />
+        ))}
+      </div>
       <div className="max-w-6xl mx-auto px-4 relative" ref={ref}>
         <div className="text-center mb-16">
           <h1 className="text-5xl font-bold mb-4">
