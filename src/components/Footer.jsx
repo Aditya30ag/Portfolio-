@@ -79,7 +79,6 @@ const Footer = () => {
               <span className="inline-flex mx-1">
                 <span className="text-purple-500">❤</span>
               </span>
-              Built by 
               <span className="ml-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 bg-clip-text text-transparent font-medium">
                 Aditya Agrawal
               </span>
