@@ -84,7 +84,7 @@ export default function Homepage () {
           color:"black",
         }}
       >
-        A MERN
+        A MERN-Stack
         
       </h2>
       <h2
@@ -101,7 +101,7 @@ export default function Homepage () {
           color:"black",
         }}
       >
-        Stack-developer
+        Developer
       </h2>
       <div style={{marginLeft:"36%"}}><SocialHandles/></div>
     </div>
