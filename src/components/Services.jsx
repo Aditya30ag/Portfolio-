@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 
 const Services = () => {
-  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
+  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || '';
   // Dark theme colors
   const darkColors = ['#6366F1', '#8B5CF6', '#EC4899', '#F43F5E'];
   const services=[

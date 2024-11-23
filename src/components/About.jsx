@@ -4,7 +4,7 @@ import Image from 'next/image';
 import "../styles/about.css";
 
 const About = () => {
-  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
+  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || '';
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
