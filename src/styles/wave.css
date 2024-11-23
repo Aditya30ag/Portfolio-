@@ -9,6 +9,7 @@
   
   .wave {
     position: absolute;
+    top:20px;
     bottom: 0;
     left: 0;
     width: 200%;

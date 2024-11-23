@@ -116,7 +116,7 @@ const About = () => {
     {
       institution: "Benovate-Ideathon",
       degree: "RANK-1 Winner!!",
-      year: "2024",
+      year: "23-Nov-2024",
       description: "Role-MERN Stack",
     },
   ];
