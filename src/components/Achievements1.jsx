@@ -2,7 +2,7 @@ import Image from 'next/image';
 import React, { useEffect, useRef } from 'react';
 
 const Achievement1 = () => {
-  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH ;
+  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || '';
   return (
       <Image
         src={publicPath+"/images/Screenshot 2024-11-19 015936.png"}
