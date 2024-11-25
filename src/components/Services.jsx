@@ -22,7 +22,7 @@ const Services = () => {
     {
       "name": "Emotion Detector",
       "icon": "/images/Screenshot 2024-11-21 195313.png",
-      "link": "https://github.com/Aditya30ag/Lab-project.git",
+      "link": "https://github.com/Aditya30ag/FIleCompressor",
       "description": "Uses images or video to analyze facial expressions and detect emotions like happiness, sadness, anger, etc. Uses machine learning models or algorithms (e.g., neural networks, SVMs) trained on labeled emotional data."
     }
   ]

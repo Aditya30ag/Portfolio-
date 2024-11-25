@@ -57,7 +57,6 @@ const Footer = () => {
                   <Link
                     key={i}
                     to={route.id || ''}
-                    smooth={true}
                     className="block text-gray-500 hover:text-gray-300 transition-colors duration-200 cursor-pointer text-sm"
                   >
                     {route.name}
