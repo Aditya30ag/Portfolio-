@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 import "../styles/about.css";
+import { Award } from 'lucide-react';
 
 const About = () => {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || "";
@@ -120,6 +121,35 @@ const About = () => {
       description: "Role-MERN Stack",
     },
   ];
+  const certificates = [
+    {
+      institution: "Javascript Intermediate",
+      image: "/images/Screenshot 2024-11-26 145051.png",
+      year: "2024",
+      link:"https://www.hackerrank.com/certificates/iframe/039b5c3bb1b4",
+      description: "Click !! ",
+    },
+    {
+      institution: "GFG Hackfest Finalist",
+      image: "/images/Screenshot 2024-10-29 151804.png",
+      year: "2024",
+      link:"https://media.geeksforgeeks.org/notifications/image(39)-min-20240923172036.png",
+      description: "Click !!",
+    },
+    {
+      institution: "Digital Skills User experience",
+      image: "/images/Screenshot 2024-11-26 145129.png",
+      link:"https://www.futurelearn.com/certificates/e2m17oo",
+      year: "2024",
+      description: "Click !!",
+    },
+    {
+      institution: "SIH BU",
+      image: "/images/Screenshot 2024-11-26 145150.png",
+      year: "23-Nov-2024",
+      description: "Click !!",
+    },
+  ];
 
   return (
     <section
@@ -189,6 +219,16 @@ const About = () => {
             >
               Hackathons
             </button>
+            <button
+              onClick={() => setActiveTab("certificates")}
+              className={`px-6 py-2 rounded-full transition-all duration-300 ${
+                activeTab === "certificates"
+                  ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white"
+                  : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+              }`}
+            >
+              Certificates
+            </button>
           </div>
         </div>
         <div className="container-fluid bg-gradient-to-br from-gray-900 to-gray-800 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
@@ -244,7 +284,7 @@ const About = () => {
           )}
 
           {activeTab === "education" && (
-            <div className="space-y-6">
+            <div className="flex overflow-x-auto p-4 gap-6">
               {education.map((edu, index) => (
                 <motion.div
                   key={index}
@@ -295,6 +335,77 @@ const About = () => {
                   </motion.div>
                 ))}
               </div>
+          )}
+
+          {activeTab === "certificates" && (
+          
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-4">
+                Professional Certifications
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Showcasing my continuous learning and professional development through verified certifications.
+              </p>
+            </div>
+    
+            <div className="flex overflow-x-auto space-x-6 pb-8 no-scrollbar">
+                {certificates.map((cert, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ 
+                      delay: index * 0.2,
+                      type: "spring",
+                      stiffness: 100
+                    }}
+                    className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 
+                              hover:from-gray-700 hover:to-gray-800 
+                              transition-all duration-300 
+                              border border-gray-700 
+                              min-w-[320px] 
+                              max-w-[400px] 
+                              flex-shrink-0 
+                              shadow-lg 
+                              hover:shadow-xl 
+                              transform hover:-translate-y-2"
+                  >
+                    <div className="flex items-center mb-4">
+                      <Award className="text-indigo-400 mr-3" size={32} />
+                      <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
+                        {cert.institution}
+                      </h3>
+                    </div>
+                  <a href={cert.link} target="blank">
+                    <div className="relative mb-4 h-48 w-full overflow-hidden rounded-lg">
+                      <Image
+                        src={publicPath + cert.image}
+                        alt={cert.name}
+                        layout="fill"
+                        objectFit="cover"
+                        className="transition-transform duration-300 hover:scale-110"
+                      />
+                    </div>
+      
+                    <div className="space-y-2">
+                      <p className="text-lg font-semibold text-gray-200">
+                        {cert.degree}
+                      </p>
+                      <p className="text-gray-400 text-sm">
+                        {cert.description}
+                      </p>
+                      {cert.issueDate && (
+                        <div className="text-xs text-gray-500 mt-2">
+                          Issued: {cert.issueDate}
+                        </div>
+                      )}
+                    </div>
+                    </a>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           )}
         </div>
       </div>

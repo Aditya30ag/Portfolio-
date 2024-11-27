@@ -9,7 +9,7 @@ const Services = () => {
   const services=[
     {
       "name": "Voting System",
-      "icon": "/images/Screenshot 2024-11-20 012106.png",
+      "icon": "/images/Screenshot 2024-11-27 104704.png",
       "link": "https://github.com/Aditya30ag/votingapp.git",
       "description": "This platform enables users to create, manage, and participate in secure and efficient voting processes. It ensures transparency, accuracy, and accessibility, catering to a variety of voting scenarios like elections, surveys, or polls."
     },

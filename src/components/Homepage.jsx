@@ -80,7 +80,6 @@ export default function Homepage () {
           backgroundClip: "text",
           color: "transparent",
           textAlign: "center",
-          animation: "pulse 2s infinite linear", // Apply rotation animation
           color:"black",
         }}
       >
@@ -97,7 +96,6 @@ export default function Homepage () {
           color: "transparent",
           marginBottom: "1rem",
           textAlign: "center",
-          animation: "pulse 2s infinite linear", // Apply rotation animation
           color:"black",
         }}
       >
