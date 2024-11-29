@@ -137,8 +137,15 @@ const About = () => {
       description: "Click !!",
     },
     {
+      institution: "Bennovate Ideathon",
+      image: "/images/Screenshot 2024-11-29 112520.png",
+      link:"",
+      year: "2024",
+      description: "Click !!",
+    },
+    {
       institution: "Digital Skills User experience",
-      image: "/images/Screenshot 2024-11-26 145129.png",
+      image: "/images/Screenshot 2024-11-29 113315.png",
       link:"https://www.futurelearn.com/certificates/e2m17oo",
       year: "2024",
       description: "Click !!",
@@ -146,7 +153,7 @@ const About = () => {
     {
       institution: "SIH BU",
       image: "/images/Screenshot 2024-11-26 145150.png",
-      year: "23-Nov-2024",
+      year: "2024",
       description: "Click !!",
     },
   ];
