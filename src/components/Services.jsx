@@ -82,6 +82,15 @@ const Services = () => {
       {/* Animated Background */}
       <div className="absolute inset-0 opacity-5 overflow-hidden bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift">
       </div>
+      <div id="gooey" className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[20%] left-[6%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
+      <div id="gooey" className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[20%] left-[36%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
+      <div id="gooey" className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[20%] left-[66%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <h1 className="mb-10 text-4xl font-bold text-center relative">

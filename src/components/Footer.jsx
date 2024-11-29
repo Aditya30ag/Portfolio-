@@ -1,6 +1,4 @@
 import React from "react";
-import Image from "next/image";
-import SocialHandles from "./SocialHandles";
 import { Link } from 'react-scroll';
 
 const Footer = () => {

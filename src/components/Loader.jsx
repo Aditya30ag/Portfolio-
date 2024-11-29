@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 
 const Loader = () => {
   const [mounted, setMounted] = useState(false);
-  const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
 
   useEffect(() => {
     setMounted(true);

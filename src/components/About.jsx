@@ -159,12 +159,27 @@ const About = () => {
   ];
 
   return (
+    
     <section
       id="about"
       className="py-20 relative overflow-hidden flex justify-center items-center"
       style={{ zIndex: "200" }}
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift"></div>
+     
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift">
+      <div id="gooey" className="h-[10vw] w-[10vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[44%] left-[88%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
+      <div id="gooey" className="h-[8vw] w-[8vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[58%] left-[88%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
+      <div id="gooey" className="h-[10vw] w-[10vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[45%] left-[2%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
+      <div id="gooey" className="h-[8vw] w-[8vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[58%] left-[2%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
+      
+      </div>
+      </div>
       <div className="absolute inset-0">
         {[...Array(100)].map((_, i) => (
           <motion.div
