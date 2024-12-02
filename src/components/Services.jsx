@@ -129,8 +129,8 @@ const Services = () => {
                   </button>
                   <a
                     href={service.link}
-                    smooth
-                    target='_blank'
+                    smooth="true"
+                    target='blank'
                     className="px-4 py-2 text-sm font-medium text-white bg-[#6366F1] rounded-md hover:bg-[#8B5CF6] transition-colors cursor-pointer"
                   >
                     Get Code

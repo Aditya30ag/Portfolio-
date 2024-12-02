@@ -106,18 +106,21 @@ const About = () => {
       institution: "SIH BU",
       degree: "RANK-39th",
       year: "2024",
+      image:"/images/Screenshot 2024-12-02 002240.png",
       description: "39th rank SIH in Bennett University ",
     },
     {
       institution: "GFG HackFest",
       degree: "RANK-4th",
       year: "2024",
+      image:"/images/Screenshot 2024-12-02 003809.png",
       description: "Role-MERN Stack",
     },
     {
       institution: "Benovate-Ideathon",
       degree: "RANK-1 Winner!!",
       year: "23-Nov-2024",
+      image:"/images/Screenshot 2024-12-02 002240.png",
       description: "Role-MERN Stack",
     },
   ];
@@ -333,30 +336,43 @@ const About = () => {
           )}
           {activeTab === "experience" && (
           <div className="flex overflow-x-auto p-4 gap-6">
-                {experience.map((edu, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                    className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-gray-700 min-w-[320px] flex-shrink-0"
-                  >
-                    <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-                      {edu.institution}
-                    </h3>
-                    
-                    <p className="text-lg font-semibold text-gray-200 mt-2">
-                      {edu.degree}
-                    </p>
-                    <p className="text-sm text-indigo-400 mt-1">
-                      {edu.year}
-                    </p>
-                    <p className="text-gray-400 mt-2">
-                      {edu.description}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
+          {experience.map((edu, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: index * 0.2 }}
+              className="relative bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-6 hover:from-gray-700 hover:to-gray-800 transition-all duration-300 border border-gray-700 min-w-[320px] flex-shrink-0"
+            >
+              {/* image positioned at top right */}
+              {edu.image && (
+                <div className="absolute top-4 right-4">
+                  <Image 
+                    src={edu.image} 
+                    alt={""}
+                    width={50} 
+                    height={50} 
+                    className="object-contain opacity-70 hover:opacity-100 transition-opacity"
+                  />
+                </div>
+              )}
+        
+              <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
+                {edu.institution}
+              </h3>
+        
+              <p className="text-lg font-semibold text-gray-200 mt-2">
+                {edu.degree}
+              </p>
+              <p className="text-sm text-indigo-400 mt-1">
+                {edu.year}
+              </p>
+              <p className="text-gray-400 mt-2">
+                {edu.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
           )}
 
           {activeTab === "certificates" && (

@@ -1,117 +1,77 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import '../styles/wave.css';
 import '../styles/homepage.css';
 import SocialHandles from "./SocialHandles";
 
-
-export default function Homepage () {
-
+export default function Homepage() {
   return (
     <>
-    <section id="home" className="pt-14 bg-transparent relative overflow-hidden" style={{display:"flex",flexDirection:"row",justifyContent:"space-between",alignItems:"center",minHeight:"500px"}}>
-    <div 
-      style={{
-        backgroundColor: "transparent",
-        padding: "2rem",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent:"center",
-        alignItems:"center",
-        gap: "0.5rem",
-      }}
-    >
-      <h1 
-        style={{
-          fontSize: "3.5rem",
-          fontWeight: "bold",
-          background: "linear-gradient(45deg, #6366F1, #8B5CF6)",
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          color: "transparent",
-          marginBottom: "0.5rem",
-          letterSpacing: "-0.02em",
-          textAlign:"center",
-        }}
+      <section 
+        id="home" 
+        className="pt-14 bg-transparent relative overflow-hidden flex flex-col md:flex-row justify-between items-center min-h-[500px] px-4 sm:px-6 lg:px-8"
       >
-        Hi
-      </h1>
-      
-      <h2 
-        style={{
-          fontSize: "2.5rem",
-          fontWeight: "bold",
-          color: "#E5E7EB", // gray-200
-          marginBottom: "0.25rem",
-          letterSpacing: "-0.02em",
-          textAlign:"center",
-        }}
-      >
-        I'm Aditya,
-      </h2>
-      
-      
-      
-      <h4 
-        style={{
-          fontSize: "1.125rem",
-          lineHeight: "1.75rem",
-          color: "#9CA3AF", // gray-400
-          maxWidth: "600px",
-          fontWeight: "normal",
-          letterSpacing: "0.01em",
-          textAlign:"center",
-        }}
-      >
-        Student at Bennett University with strong technical skills anchored on extensive engineering coursework and a special focus on Front-end Development and DSA.
-      </h4>
-    </div>
-    <div id="gooey" className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[5%] left-[58%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
-      
-    </div>
-    <div style={{width:"50%",zIndex:"200"}}>
-    
-      <h2
-        style={{
+        {/* Left Column - Introduction */}
+        <div 
+          className="w-full md:w-1/2 flex flex-col justify-center items-center text-center md:text-left px-4 mb-8 md:mb-0"
+        >
+          <h1 
+            className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-500 to-purple-500 bg-clip-text text-transparent mb-2 tracking-tight"
+          >
+            Hi
+          </h1>
           
-          fontSize: "2.5rem",
-          fontWeight: "bold",
-          background: "linear-gradient(45deg, #8B5CF6, #EC4899)",
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          color: "transparent",
-          textAlign: "center",
-          color:"black",
-        }}
-      >
-        A MERN-Stack
-        
-      </h2>
-      <h2
-        style={{
-          fontSize: "2.5rem",
-          fontWeight: "bold",
-          background: "linear-gradient(45deg, #8B5CF6, #EC4899)",
-          WebkitBackgroundClip: "text",
-          backgroundClip: "text",
-          color: "transparent",
-          marginBottom: "1rem",
-          textAlign: "center",
-          color:"black",
-        }}
-      >
-        Developer
-      </h2>
-      <div style={{marginLeft:"36%"}}><SocialHandles/></div>
-    </div>
-      
-    </section>
-      <div className="wave_anim absolute bottom-0 ">
-      <div className="wave wave1"></div>
-      <div className="wave wave2"></div>
-      <div className="wave wave3"></div>
-      <div className="wave wave4"></div>
-      <div className="wave wave5"></div>
-    </div>
+          <h2 
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 mb-2 tracking-tight"
+          >
+            I'm Aditya,
+          </h2>
+          
+          <h4 
+            className="text-base md:text-lg text-gray-400 max-w-xl font-normal tracking-wide text-center md:text-center"
+          >
+            Student at Bennett University with strong technical skills anchored on extensive engineering coursework and a special focus on Front-end Development and DSA.
+          </h4>
+        </div>
+
+        {/* Gooey Background Element */}
+        <div 
+          id="gooey" 
+          className="hidden md:block h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[5%] left-[58%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]"
+          style={{zIndex: 1}}
+        >
+        </div>
+
+        {/* Right Column - Developer Title and Social Handles */}
+        <div 
+          className="w-full md:w-1/2 flex flex-col items-center justify-center z-20 px-4"
+        >
+          <div className="text-center">
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"
+            >
+              A MERN-Stack
+            </h2>
+            <h2 
+              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent mb-4"
+            >
+              Developer
+            </h2>
+            
+            <div className="flex justify-center">
+              <SocialHandles />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Wave Animation */}
+      <div className="wave_anim absolute bottom-0 w-full">
+        <div className="wave wave1"></div>
+        <div className="wave wave2"></div>
+        <div className="wave wave3"></div>
+        <div className="wave wave4"></div>
+        <div className="wave wave5"></div>
+      </div>
     </>
   );
-};
+}

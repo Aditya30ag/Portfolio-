@@ -17,12 +17,12 @@ const CloseIcon = () => (
 );
 
 const Navbar = () => {
-  const tabs=[
-      
+  const tabs = [
     { "name": "Home", "id": "home" },
     { "name": "About Me", "id": "about" },
     { "name": "Projects", "id": "services" }
-  ]
+  ];
+  
   const [openSidebar, setOpenSidebar] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeTab, setActiveTab] = useState(tabs[0]?.id);
@@ -48,25 +48,29 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div className="relative" style={{marginLeft:"100px",marginRight:"100px",marginTop:"20px"}} >
-      
-      <nav className={`transition-all duration-300 ${
-        scrolled ? 'bg-white shadow-lg' : 'bg-gray-900'
-      }`}style={{borderRadius:"100px",padding:"15px 15px 15px 15px"}}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="relative px-4 sm:px-6 lg:px-8" style={{marginTop:"20px"}}>
+      <nav 
+        className={`transition-all duration-300 rounded-full ${
+          scrolled ? 'bg-white shadow-lg' : 'bg-gray-900'
+        }`}
+        style={{padding:"15px 15px 15px 15px"}}
+      >
+        <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between h-16">
-            {/* Logo */}
+            
             <div className="flex-shrink-0 flex items-center space-x-2">
               <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 
                 flex items-center justify-center">
-                <span className="text-white font-bold">AG</span>
+                <span className="text-white font-bold text-sm">AG</span>
               </div>
-              <span className={`font-bold text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}>
+              <span 
+                className={`font-bold text-base sm:text-xl ${scrolled ? 'text-gray-900' : 'text-white'}`}
+              >
                 Aditya Agrawal
               </span>
             </div>
 
-            {/* Desktop Navigation */}
+           
             <div className="hidden md:flex items-center space-x-1">
               {tabs.map((tab, index) => (
                 <ScrollLink
@@ -76,7 +80,7 @@ const Navbar = () => {
                   offset={-70}
                   spy={true}
                   onSetActive={() => setActiveTab(tab.id)}
-                  className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+                  className={`px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-300
                     ${scrolled ? 'text-gray-700 hover:text-gray-900' : 'text-white/80 hover:text-white'}
                     ${activeTab === tab.id ? 'bg-white/10 shadow-sm' : 'hover:bg-white/5'}
                     cursor-pointer relative group`}
@@ -92,11 +96,11 @@ const Navbar = () => {
             </div>
 
             {/* Contact Button & Mobile Menu */}
-            <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2 sm:space-x-4">
               <ScrollLink
                 to="contact"
                 smooth={true}
-                className={`hidden md:flex px-6 py-2 rounded-full font-medium transition-all duration-300
+                className={`hidden md:flex px-4 sm:px-6 py-2 rounded-full font-medium text-xs sm:text-base transition-all duration-300
                   transform hover:-translate-y-0.5 hover:shadow-lg
                   ${scrolled 
                     ? 'bg-blue-500 text-white hover:bg-blue-600' 
@@ -118,8 +122,10 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu */}
-        <div className={`md:hidden transition-all duration-300 ease-in-out
-          ${openSidebar ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
+        <div 
+          className={`md:hidden transition-all duration-300 ease-in-out fixed inset-x-0 top-20 z-50 bg-white shadow-lg
+            ${openSidebar ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+        >
           <div className="px-4 pt-2 pb-3 space-y-1">
             {tabs.map((tab, index) => (
               <ScrollLink
