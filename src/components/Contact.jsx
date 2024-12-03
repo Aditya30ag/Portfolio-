@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Send, Mail, Phone, User, MessageSquare } from 'lucide-react';
 import SocialHandles from './SocialHandles';
+import FloatingContactImage from './FloatingContactImage';
 
 const Contact = () => {
   const [formState, setFormState] = useState({
@@ -20,7 +21,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative min-h-screen py-24 bg-[#0a0a0a] overflow-hidden" style={{zIndex:"200"}}>
+    <section id="contact" className="relative min-h-screen py-24 bg-[#0a0a0a] overflow-hidden " style={{zIndex:"200"}}>
       {/* Animated background gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift"></div>
       
@@ -216,17 +217,19 @@ const Contact = () => {
       >
         
       </div>
+      
       </motion.div>
-      <img
+      <FloatingContactImage/>
+    </section>
+  );
+};
+
+export default Contact;
+{/* <img
           src="https://asingla.netlify.app/static/media/floating_contact.33436ad5f0d9d8b68087.png"
           alt="error"
           height={100}
           width={100}
           style={{ height: '100px', width: '100px',position:"relative",left:"90%"}}
           className="h-24 w-24 relative left-[90%] transform transition-transform duration-300 hover:scale-110"
-        />
-    </section>
-  );
-};
-
-export default Contact;
+        /> */}

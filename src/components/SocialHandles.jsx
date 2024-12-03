@@ -1,10 +1,9 @@
 import React from 'react'
-import '../styles/socialHandles.css';
 import { FaInstagram, FaXTwitter, FaGithub ,FaLinkedin} from "react-icons/fa6";
 
 const SocialHandles = () => {
   return (
-    <div className='handles-container'>
+    <div className='handles-container flex gap-10 items-center content-center'>
         {
             socialHandles.map((handle, index) => (
                 <a href={handle.link} target='_blank' className='flex-center icon-wrapper' key={index}>

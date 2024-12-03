@@ -132,7 +132,7 @@ const About = () => {
     },
     {
       institution: "Benovate-Ideathon",
-      degree: "RANK-1 Winner!!",
+      degree: "Winner!!",
       year: "23-Nov-2024",
       image:"/images/Screenshot 2024-12-02 002240.png",
       description: "Role-MERN Stack",
@@ -329,7 +329,7 @@ const About = () => {
                         alt={""}
                         width={40} 
                         height={40} 
-                        className="object-contain opacity-70 hover:opacity-100 transition-opacity"
+                        className="object-contain opacity-100 hover:opacity-100 transition-opacity"
                       />
                     </div>
                   )}

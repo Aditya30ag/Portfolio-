@@ -1,9 +1,0 @@
-.clientsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* 300px minimum size for each item */
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;  
-    align-items: center; 
-  }
-

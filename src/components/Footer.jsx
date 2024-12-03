@@ -45,7 +45,7 @@ const Footer = () => {
 
           {/* Navigation Columns */}
           {footer.map((list, index) => (
-            <div key={index} className="space-y-3">
+            <div key={index} className="space-y-3 hidden md:block">
               <h3 className="text-gray-200 text-lg font-semibold mb-4 relative">
                 {list.title}
                 <span className="absolute bottom-0 left-0 w-12 h-0.5 bg-indigo-600"></span>
