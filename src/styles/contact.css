@@ -33,7 +33,6 @@
   
   .highlight-text {
     background: linear-gradient(90deg, #4285F4, #EA4335, #FBBC05, #34A853);
-    -webkit-background-clip: text;
     color: transparent;
   }
   

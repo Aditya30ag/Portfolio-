@@ -19,13 +19,11 @@ export default function Homepage() {
           >
             Hi
           </h1>
-          
           <h2 
             className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-200 mb-2 tracking-tight"
           >
             I'm Aditya,
           </h2>
-          
           <h4 
             className="text-base md:text-lg text-gray-400 max-w-xl font-normal tracking-wide text-center md:text-center"
           >

@@ -1,9 +1,10 @@
 {
-  "name": "gdg-site",
+  "name": "PortFolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:custom-port": "cross-env PORT=4000 next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -27,6 +28,7 @@
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "css-loader": "^7.1.2",
     "eslint": "^8.57.1",
     "eslint-config-next": "14.2.13",
