@@ -204,6 +204,7 @@ const About = () => {
             transition={{
               duration: Math.random() * 15 + 5,
               repeat: Infinity,
+              repeatType: "loop",
               ease: "linear"
             }}
           />

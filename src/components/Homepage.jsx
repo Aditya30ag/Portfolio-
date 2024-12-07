@@ -27,7 +27,7 @@ export default function Homepage() {
           <h4 
             className="text-base md:text-lg text-gray-400 max-w-xl font-normal tracking-wide text-center md:text-center"
           >
-            Student at Bennett University with strong technical skills anchored on extensive engineering coursework and a special focus on Front-end Development and DSA.
+            Student at Bennett University with strong technical skills anchored on extensive engineering coursework and a special focus on Development and DSA.
           </h4>
         </div>
 
