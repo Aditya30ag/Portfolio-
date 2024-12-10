@@ -239,7 +239,7 @@ const About = () => {
         <div className="container-fluid bg-gradient-to-br from-gray-900 to-gray-800 backdrop-blur-lg rounded-2xl p-4 md:p-8 shadow-2xl">
           {activeTab === "skills" && (
             <div className="space-y-6 text-center">
-              <h1 className="text-xl md:text-2xl">Technology-Stack</h1>
+              <h1 className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Technology-Stack</h1>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4 max-w-[1200px] w-full mx-auto">
                 {skills.map((skill, index) => (
                   <motion.div

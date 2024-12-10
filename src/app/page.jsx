@@ -22,16 +22,7 @@ export default function Home() {
     restDelta: 0.001
   });
 
-  // Animation variants for staggered children
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.3
-      }
-    }
-  };
+  
 
   return (
     <>

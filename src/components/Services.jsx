@@ -94,7 +94,7 @@ const Services = () => {
 
       <div className="max-w-6xl mx-auto px-4 relative z-10">
         <h1 className="mb-10 text-4xl font-bold text-center relative">
-          <span className="bg-gradient-to-r from-[#6366F1] to-[#F43F5E] bg-clip-text text-transparent inline-block">
+          <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500 bg-clip-text text-transparent inline-block">
             Project Work
           </span>
           <span className="absolute bottom-[-0.5rem] left-0 w-full h-1 bg-gradient-to-r from-[#6366F1] to-[#F43F5E] rounded-full" />
