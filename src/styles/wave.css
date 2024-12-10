@@ -6,7 +6,7 @@
   background: linear-gradient(to bottom, transparent, rgb(17, 24, 39));
   perspective: 1500px;
   z-index: 100;
-  margin-top: 25px;
+  margin-top: 55px;
 }
 
 .wave {
@@ -20,6 +20,7 @@
   transform-origin: center bottom;
   backface-visibility: hidden;
   animation: waveAnimation 30s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  margin-top: 55px;
 }
 
 .wave1 {

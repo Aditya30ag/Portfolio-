@@ -16,22 +16,6 @@ const EnhancedLoader = () => {
 
   return ( 
     <div className="fixed inset-0 flex flex-col items-center justify-center z-50 bg-gradient-to-r from-navy-900 to-midnight-800 overflow-hidden"> 
-      {/* Starry background effect */}
-      {/* <div className="absolute inset-0 opacity-20"> 
-        {[...Array(50)].map((_, i) => ( 
-          <div 
-            key={i} 
-            className="absolute bg-blue-200 rounded-full opacity-30 animate-twinkle" 
-            style={{ 
-              top: `${Math.random() * 100}%`, 
-              left: `${Math.random() * 100}%`, 
-              width: `${Math.random() * 3}px`, 
-              height: `${Math.random() * 3}px`, 
-              animationDelay: `${Math.random() * 5}s` 
-            }} 
-          /> 
-        ))} 
-      </div>  */}
 
       <div className="relative"> 
         {/* Pulsing background circle with enhanced blur */}

@@ -45,12 +45,12 @@ export default function Homepage() {
         >
           <div className="text-center">
             <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-800 to-pink-500 bg-clip-text text-transparent"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-900 to-pink-700 bg-clip-text text-transparent"
             >
               A MERN-Stack
             </h2>
             <h2 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-800 to-pink-500 bg-clip-text text-transparent mb-4"
+              className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-800 to-pink-600 bg-clip-text text-transparent mb-4"
             >
               Developer
             </h2>
