@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaInstagram, FaXTwitter, FaGithub ,FaLinkedin} from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaGithub ,FaLinkedin, FaYoutube} from "react-icons/fa6";
 
 const SocialHandles = () => {
   return (
@@ -19,7 +19,7 @@ const socialHandles = [
   {
     name:"Instagram",
     icon:<FaInstagram />,
-    link:"https://www.instagram.com/_.aditya_agrawal_/",
+    link:"https://www.instagram.com/__.aditya_agrawal_/",
   },
   {
     name:"Linkedin",
@@ -27,12 +27,12 @@ const socialHandles = [
     link:"https://www.linkedin.com/in/aditya-agrawal-527150303/",
   },
   {
-    name:"Twitter",
-    icon:<FaXTwitter/>,
-    link:"",
+    name:"Youtube",
+    icon:<FaYoutube/>,
+    link:"https://www.youtube.com/@Coder-python-Coder",
   },
   {
-    name:"Youtube",
+    name:"GitHub",
     icon:<FaGithub/>,
     link:"https://github.com/Aditya30ag",
   },

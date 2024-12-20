@@ -47,7 +47,7 @@ export default function Homepage() {
             <h2 
               className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-900 to-pink-700 bg-clip-text text-transparent"
             >
-              A MERN-Stack
+              A Mern-Stack
             </h2>
             <h2 
               className="text-4xl md:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-purple-800 to-pink-600 bg-clip-text text-transparent mb-4"

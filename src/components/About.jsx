@@ -156,7 +156,6 @@ const About = () => {
     {
       institution: "Bennovate Ideathon",
       image: "/images/Screenshot 2024-11-29 112520.png",
-      link:"",
       year: "2024",
       description: "Click !!",
     },
