@@ -225,11 +225,3 @@ const Contact = () => {
 };
 
 export default Contact;
-{/* <img
-          src="https://asingla.netlify.app/static/media/floating_contact.33436ad5f0d9d8b68087.png"
-          alt="error"
-          height={100}
-          width={100}
-          style={{ height: '100px', width: '100px',position:"relative",left:"90%"}}
-          className="h-24 w-24 relative left-[90%] transform transition-transform duration-300 hover:scale-110"
-        /> */}

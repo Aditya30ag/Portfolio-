@@ -106,7 +106,7 @@ const Navbar = () => {
                     ? 'bg-blue-500 text-white hover:bg-blue-600' 
                     : 'bg-white text-gray-900 hover:bg-gray-100'}`}
               >
-                Contact Us
+                Contact Me
               </ScrollLink>
 
               {/* Mobile menu button */}
@@ -150,7 +150,7 @@ const Navbar = () => {
               className="block w-full text-center px-4 py-2 rounded-full font-medium bg-blue-500 
                 text-white hover:bg-blue-600 transition-colors duration-300"
             >
-              Contact Us
+              Contact Me
             </ScrollLink>
           </div>
         </div>
