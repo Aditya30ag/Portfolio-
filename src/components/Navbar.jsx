@@ -124,7 +124,9 @@ const Navbar = () => {
         {/* Mobile menu */}
         <div 
           className={`md:hidden transition-all duration-300 ease-in-out fixed inset-x-0 top-20 z-50 bg-white shadow-lg
-            ${openSidebar ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}
+            ${openSidebar ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'} rounded-lg mt-4  ${scrolled 
+                    ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 hidden' 
+                    : 'text-gray-700 hover:text-white hover:bg-gray-800'}`}
         >
           <div className="px-4 pt-2 pb-3 space-y-1">
             {tabs.map((tab, index) => (
@@ -135,10 +137,10 @@ const Navbar = () => {
                 offset={-70}
                 spy={true}
                 onClick={() => setOpenSidebar(false)}
-                className={`block px-4 py-2 rounded-lg text-base font-medium transition-colors duration-300
+                className={`block px-4 py-2 rounded-full text-base font-medium transition-colors duration-300
                   ${scrolled 
-                    ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100' 
-                    : 'text-gray-300 hover:text-white hover:bg-gray-800'}`}
+                    ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100 ' 
+                    : 'text-gray-700 hover:text-white hover:bg-gray-800'}`} 
               >
                 {tab.name}
               </ScrollLink>
@@ -147,8 +149,10 @@ const Navbar = () => {
               to="contact"
               smooth={true}
               onClick={() => setOpenSidebar(false)}
-              className="block w-full text-center px-4 py-2 rounded-full font-medium bg-blue-500 
-                text-white hover:bg-blue-600 transition-colors duration-300"
+              className={`block w-full text-center px-4 py-2 rounded-full font-medium bg-blue-500 
+                text-white hover:bg-blue-600 transition-colors duration-300  ${scrolled 
+                    ? 'text-gray-700 hover:text-gray-900 hover:bg-gray-100' 
+                    : 'text-gray-700 hover:text-white hover:bg-gray-800'}`}
             >
               Contact Me
             </ScrollLink>
