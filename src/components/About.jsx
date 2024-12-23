@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
-import "../styles/about.css";
+// import "../styles/about.css";
 import { Award } from 'lucide-react';
 
 const About = () => {
@@ -181,16 +181,26 @@ const About = () => {
       style={{ zIndex: "200" }}
     >
       {/* Background gradient and gooey elements remain the same */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20 animate-gradient-shift">
-        {/* Existing gooey divs */}
-      </div>
+      <div className="line-bg">
+            {[...Array(80)].map((_, i) => (
+              <div
+                key={i}
+                className="line"
+                style={{
+                  left: `${i * 24.28}%`,
+                  '--delay': `${i * 0.5}s`
+                }}
+              />
+            ))}
+            </div>
 
       {/* Star background remains the same */}
       <div className="absolute inset-0">
+      
         {[...Array(100)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-1 h-1 bg-white rounded-full hidden md:block"
+            className="absolute w-0.5 h-2 bg-white rounded-full hidden md:block"
             initial={{
               x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
               y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
@@ -207,7 +217,9 @@ const About = () => {
               ease: "linear"
             }}
           />
+          
         ))}
+        
       </div>
 
       <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 relative w-full" ref={ref}>

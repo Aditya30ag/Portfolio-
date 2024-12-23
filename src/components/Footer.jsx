@@ -21,7 +21,7 @@ const Footer = () => {
       }
   ]
   return (
-    <footer className="bg-black py-6 px-4 relative overflow-hidden">
+    <footer className="bg-black py-6 px-4 relative overflow-hidden" style={{paddingBottom:"100px"}}>
       {/* Dark theme colored bar at the top */}
       <div className="absolute top-0 left-0 right-0 h-1 flex">
         <div className="flex-1 bg-indigo-600"></div>
@@ -66,7 +66,7 @@ const Footer = () => {
         </div>
 
         {/* Copyright Section */}
-        <div className="border-t border-gray-900 pt-8 mt-8">
+        <div className="border-t border-gray-900 pt-4 mt-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <h4 className="text-gray-500 text-sm">
               Copyright &copy; All rights reserved - {new Date().getFullYear()}

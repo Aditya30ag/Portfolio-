@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { animate } from 'framer-motion';
 
 const Services = () => {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || '';
@@ -124,7 +125,7 @@ const Services = () => {
                style={{
                  animation: 'scroll 15s linear infinite',
                  width: 'fit-content',
-                 paddingLeft: '0%'
+                 paddingLeft: '0%',
                }}>
             {[...services, ...services].map((service, index) => (
               <div
