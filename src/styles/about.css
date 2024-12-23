@@ -92,3 +92,86 @@
         text-align: center;
     }
 }
+
+/* Line background styling */
+.line-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  .line {
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    top: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    animation: lineFade 3s infinite;
+    animation-delay: var(--delay);
+  }
+  
+  @keyframes lineFade {
+    0% {
+      opacity: 0.1;
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      opacity: 0.1;
+    }
+  }
+  
+  /* Star background styling */
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  
+  /* General section styling */
+  #about {
+    position: relative;
+    background-color: rgba(17, 24, 39, 0.8); /* Based on your gray-900 usage */
+    min-height: 100vh;
+    overflow: hidden;
+  }
+  
+  /* Container blur effect */
+  .container-fluid {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* Custom scrollbar hiding */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .line {
+      opacity: 0.05;
+    }
+    
+    .star {
+      opacity: 0.5;
+    }
+  }
