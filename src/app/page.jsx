@@ -9,6 +9,7 @@ import Homepage from "@/components/Homepage";
 import About from "@/components/About";
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Slider from "@/components/Slider";
+import Wave from "@/components/Wave";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
@@ -62,15 +63,16 @@ export default function Home() {
       >
         <Homepage />
       </motion.section>
-
-      <motion.section
+      <Wave/>
+      
+      {/* <motion.section
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.2 }}
         viewport={{ once: true }}
-      >
+      > */}
         <About />
-      </motion.section>
+      {/* </motion.section> */}
 
       <motion.section
         initial={{ opacity: 0, x: -100 }}
@@ -85,16 +87,16 @@ export default function Home() {
         <Slider />
       </motion.section>
 
-      <motion.section
+      {/* <motion.section
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-      >
+      > */}
         <Services/>
-      </motion.section>
+      {/* </motion.section> */}
 
-      <motion.section
+      {/* <motion.section
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ 
@@ -103,9 +105,9 @@ export default function Home() {
           stiffness: 70
         }}
         viewport={{ once: true }}
-      >
+      > */}
         <Contact />
-      </motion.section>
+      {/* </motion.section> */}
 
       <motion.footer
         initial={{ opacity: 0, y: 50 }}

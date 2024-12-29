@@ -145,7 +145,7 @@ const Homepage = () => {
         </section>
       </div>
 
-      {/* Wave Animation */}
+      {/* Wave Animation
       <div className="wave-container">
         <div className="wave_anim w-full">
           <div className="wave wave1"></div>
@@ -154,7 +154,7 @@ const Homepage = () => {
           <div className="wave wave4"></div>
           <div className="wave wave5"></div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
