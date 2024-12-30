@@ -6,6 +6,7 @@ import { Award } from 'lucide-react';
 
 const About = () => {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || "";
+
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
@@ -271,14 +272,16 @@ const About = () => {
                     `}
                     >
                       <div className="flex flex-col items-center justify-center h-full w-full">
+                        {skill.image&&(
                         <div className="relative h-6 w-6 md:h-10 md:w-10 overflow-hidden">
                           <Image
-                            src={publicPath + skill.image}
+                            src={skill.image}
                             alt={skill.name}
                             fill
                             className="transition-transform duration-300 filter brightness-100"
                           />
-                        </div>
+                        </div>)}
+
                         <p className="text-[10px] md:text-xs font-semibold text-white text-center mt-1">
                           {skill.name}
                         </p>
@@ -409,7 +412,7 @@ const About = () => {
                     <a href={cert.link} target="blank">
                       <div className="relative mb-2 md:mb-4 h-32 md:h-48 w-full overflow-hidden rounded-lg">
                         <Image
-                          src={publicPath + cert.image}
+                          src={cert.image}
                           alt={cert.institution}
                           layout="fill"
                           objectFit="cover"

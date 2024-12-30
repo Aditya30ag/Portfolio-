@@ -10,10 +10,10 @@ import About from "@/components/About";
 import { motion, useScroll, useSpring } from 'framer-motion';
 import Slider from "@/components/Slider";
 import Wave from "@/components/Wave";
+import { useEffect } from "react";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
- 
 
   // Add scroll progress indicator
   const { scrollYProgress } = useScroll();

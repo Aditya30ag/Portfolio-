@@ -28,6 +28,12 @@ const Services = () => {
       "icon": "/images/Screenshot 2024-12-20 145241.png",
       "link": "https://github.com/Aditya30ag/FIleCompressor",
       "description": "The Online Laundry Management System is a web-based application for bennett university hostels designed to simplify and automate the operations of laundry businesses and enhance the customer experience. This project focuses on creating a user-friendly, efficient platform that connects customers with laundry service providers while offering robust management tools for the business."
+    },
+    {
+      "name": "Chat Application",
+      "icon": "/images/Screenshot 2024-12-30 140301.png",
+      "link": "https://github.com/Aditya30ag/ChatRoom",
+      "description": "This chat room is a modern, real-time messaging platform powered by Socket.IO and Node.js. It offers seamless communication with instant message delivery and dynamic user interactions, creating an engaging experience for everyone."
     }
   ];
 
@@ -72,6 +78,10 @@ const Services = () => {
       scrollbar-width: none;
     }
 
+    .scroll-content {
+      animation: scroll 15s linear infinite;
+    }
+
     .scroll-container:hover .scroll-content {
       animation-play-state: paused;
     }
@@ -102,7 +112,6 @@ const Services = () => {
       <div className="absolute inset-0 opacity-5 overflow-hidden bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20">
       </div>
       
-      {/* Responsive gooey backgrounds */}
       <div className="hidden md:block">
         <div className="h-[32vw] w-[32vw] absolute rounded-full bg-gradient-to-r from-blue-500 to-purple-500 top-[20%] left-[6%] blur-[20px] animate-[gooey_6s_ease-in-out_infinite_alternate]" style={{zIndex:"1"}}>
         </div>
@@ -121,9 +130,8 @@ const Services = () => {
         </h1>
 
         <div className="w-full overflow-hidden scroll-container">
-          <div className="flex gap-8 pb-4 animate-fade-in scroll-content" 
+          <div className="flex gap-8 pb-4 scroll-content" 
                style={{
-                 animation: 'scroll 15s linear infinite',
                  width: 'fit-content',
                  paddingLeft: '0%',
                }}>
