@@ -161,6 +161,12 @@ const About = () => {
       description: "Click !!",
     },
     {
+      institution: "HackStreet 3.0 (JIIT,Nodia)",
+      image: "/images/Screenshot 2025-02-05 130750.png",
+      year: "2024",
+      description: "Click !!",
+    },
+    {
       institution: "Digital Skills User experience",
       image: "/images/Screenshot 2024-11-29 113315.png",
       link:"https://www.futurelearn.com/certificates/e2m17oo",
@@ -398,7 +404,8 @@ const About = () => {
                               flex-shrink-0 
                               shadow-lg 
                               hover:shadow-xl 
-                              transform hover:-translate-y-2"
+                              transform hover:-translate-y-2
+                              animate-[scroll_24s_linear_infinite]"
                   >
                     <div className="flex items-center mb-2 md:mb-4">
                     <Award 
