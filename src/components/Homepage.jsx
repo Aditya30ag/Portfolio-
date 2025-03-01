@@ -2,6 +2,7 @@ import React from "react";
 import '../styles/wave.css';
 import '../styles/homepage.css';
 import SocialHandles from "./SocialHandles";
+import ParticleCanvas from "./ParticleCanvas";
 
 const Homepage = () => {
   const styles = `
@@ -91,6 +92,7 @@ const Homepage = () => {
           id="home"
           className="h-full pt-14 bg-transparent relative overflow-hidden flex flex-col md:flex-row justify-between items-center min-h-[500px] px-4 sm:px-6 lg:px-8"
         >
+          <ParticleCanvas/>
           {/* Mobile Line Background */}
           <div className="line-bg">
             {[...Array(8)].map((_, i) => (

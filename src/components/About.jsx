@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion, useInView, useAnimation } from "framer-motion";
 import Image from "next/image";
 // import "../styles/about.css";
-import { Award } from 'lucide-react';
+import { Award } from "lucide-react";
 
 const About = () => {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH || "";
@@ -23,15 +23,15 @@ const About = () => {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-  
+
     // Check initial size
     checkMobile();
-  
+
     // Add event listener
-    window.addEventListener('resize', checkMobile);
-  
+    window.addEventListener("resize", checkMobile);
+
     // Cleanup
-    return () => window.removeEventListener('resize', checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
   const skills = [
     {
@@ -121,63 +121,22 @@ const About = () => {
       institution: "SIH BU",
       degree: "RANK-39th",
       year: "2024",
-      image:"/images/Screenshot 2024-12-02 002240.png",
+      image: "/images/Screenshot 2024-12-02 002240.png",
       description: "39th rank SIH in Bennett University ",
     },
     {
       institution: "GFG HackFest",
       degree: "RANK-4th",
       year: "2024",
-      image:"/images/Screenshot 2024-12-02 003809.png",
+      image: "/images/Screenshot 2024-12-02 003809.png",
       description: "Role-MERN Stack",
     },
     {
       institution: "Benovate-Ideathon",
       degree: "Winner!!",
       year: "23-Nov-2024",
-      image:"/images/Screenshot 2024-12-02 002240.png",
+      image: "/images/Screenshot 2024-12-02 002240.png",
       description: "Role-MERN Stack",
-    },
-  ];
-  const certificates = [
-    {
-      institution: "Javascript Intermediate",
-      image: "/images/Screenshot 2024-11-26 145051.png",
-      year: "2024",
-      link:"https://www.hackerrank.com/certificates/iframe/039b5c3bb1b4",
-      description: "Click !! ",
-    },
-    {
-      institution: "GFG Hackfest Finalist",
-      image: "/images/Screenshot 2024-10-29 151804.png",
-      year: "2024",
-      link:"https://media.geeksforgeeks.org/notifications/image(39)-min-20240923172036.png",
-      description: "Click !!",
-    },
-    {
-      institution: "Bennovate Ideathon",
-      image: "/images/Screenshot 2024-11-29 112520.png",
-      year: "2024",
-      description: "Click !!",
-    },
-    {
-      institution: "HackStreet 3.0 (JIIT,Nodia)",
-      image: "/images/Screenshot 2025-02-05 130750.png",
-      year: "2024",
-      description: "Click !!",
-    },
-    {
-      institution: "Digital Skills User experience",
-      image: "/images/Screenshot 2024-11-29 113315.png",
-      link:"https://www.futurelearn.com/certificates/e2m17oo",
-      year: "2024",
-      description: "Click !!",
-    },
-    {
-      institution: "SIH BU",
-      image: "/images/Screenshot 2024-11-26 145150.png",
-      year: "2024",
-      description: "Click !!",
     },
   ];
 
@@ -189,47 +148,53 @@ const About = () => {
     >
       {/* Background gradient and gooey elements remain the same */}
       <div className="line-bg">
-            {[...Array(80)].map((_, i) => (
-              <div
-                key={i}
-                className="line"
-                style={{
-                  left: `${i * 24.28}%`,
-                  '--delay': `${i * 0.5}s`
-                }}
-              />
-            ))}
-            </div>
+        {[...Array(80)].map((_, i) => (
+          <div
+            key={i}
+            className="line"
+            style={{
+              left: `${i * 24.28}%`,
+              "--delay": `${i * 0.5}s`,
+            }}
+          />
+        ))}
+      </div>
 
       {/* Star background remains the same */}
       <div className="absolute inset-0">
-      
         {[...Array(100)].map((_, i) => (
           <motion.div
             key={i}
             className="absolute w-0.5 h-2 bg-white rounded-full hidden md:block"
             initial={{
-              x: typeof window !== 'undefined' ? Math.random() * window.innerWidth : 0,
-              y: typeof window !== 'undefined' ? Math.random() * window.innerHeight : 0,
+              x:
+                typeof window !== "undefined"
+                  ? Math.random() * window.innerWidth
+                  : 0,
+              y:
+                typeof window !== "undefined"
+                  ? Math.random() * window.innerHeight
+                  : 0,
               opacity: Math.random() * 0.7 + 0.4,
             }}
             animate={{
               y: [null, Math.random() * -100],
-              opacity: [null, 0]
+              opacity: [null, 0],
             }}
             transition={{
               duration: Math.random() * 15 + 5,
               repeat: Infinity,
               repeatType: "loop",
-              ease: "linear"
+              ease: "linear",
             }}
           />
-          
         ))}
-        
       </div>
 
-      <div className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 relative w-full" ref={ref}>
+      <div
+        className="max-w-6xl mx-auto px-4 md:px-6 lg:px-8 relative w-full"
+        ref={ref}
+      >
         <div className="text-center mb-8 md:mb-16">
           <h1 className="text-3xl md:text-5xl font-bold mb-4">
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 via-purple-500 to-violet-500">
@@ -238,26 +203,30 @@ const About = () => {
           </h1>
 
           <div className="flex flex-wrap justify-center gap-2 md:gap-4 mt-4 md:mt-8 mb-4 md:mb-6">
-            {["skills", "education", "experience", "certificates"].map((tab) => (
-              <button
-                key={tab}
-                onClick={() => setActiveTab(tab)}
-                className={`px-3 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-base transition-all duration-300 ${
-                  activeTab === tab
-                    ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white"
-                    : "bg-gray-800 text-gray-300 hover:bg-gray-700"
-                }`}
-              >
-                {tab.charAt(0).toUpperCase() + tab.slice(1)}
-              </button>
-            ))}
+            {["skills", "education", "experience"].map(
+              (tab) => (
+                <button
+                  key={tab}
+                  onClick={() => setActiveTab(tab)}
+                  className={`px-3 md:px-6 py-1 md:py-2 rounded-full text-xs md:text-base transition-all duration-300 ${
+                    activeTab === tab
+                      ? "bg-gradient-to-r from-indigo-600 to-violet-600 text-white"
+                      : "bg-gray-800 text-gray-300 hover:bg-gray-700"
+                  }`}
+                >
+                  {tab.charAt(0).toUpperCase() + tab.slice(1)}
+                </button>
+              )
+            )}
           </div>
         </div>
 
         <div className="container-fluid bg-gradient-to-br from-gray-900 to-gray-800 backdrop-blur-lg rounded-2xl p-4 md:p-8 shadow-2xl">
           {activeTab === "skills" && (
             <div className="space-y-6 text-center">
-              <h1 className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">Technology-Stack</h1>
+              <h1 className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
+                Technology-Stack
+              </h1>
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 md:gap-4 max-w-[1200px] w-full mx-auto">
                 {skills.map((skill, index) => (
                   <motion.div
@@ -278,15 +247,16 @@ const About = () => {
                     `}
                     >
                       <div className="flex flex-col items-center justify-center h-full w-full">
-                        {skill.image&&(
-                        <div className="relative h-6 w-6 md:h-10 md:w-10 overflow-hidden">
-                          <Image
-                            src={skill.image}
-                            alt={skill.name}
-                            fill
-                            className="transition-transform duration-300 filter brightness-100"
-                          />
-                        </div>)}
+                        {skill.image && (
+                          <div className="relative h-6 w-6 md:h-10 md:w-10 overflow-hidden">
+                            <Image
+                              src={skill.image}
+                              alt={skill.name}
+                              fill
+                              className="transition-transform duration-300 filter brightness-100"
+                            />
+                          </div>
+                        )}
 
                         <p className="text-[10px] md:text-xs font-semibold text-white text-center mt-1">
                           {skill.name}
@@ -325,9 +295,15 @@ const About = () => {
                   <p className="text-sm md:text-lg font-semibold text-gray-200 mt-2">
                     {edu.degree}
                   </p>
-                  <p className="text-xs md:text-sm text-indigo-400 mt-1">{edu.year}</p>
-                  <p className="text-xs md:text-sm text-gray-400 mt-2">{edu.description}</p>
-                  <p className="text-xs md:text-sm text-gray-400 mt-2">{edu.description1}</p>
+                  <p className="text-xs md:text-sm text-indigo-400 mt-1">
+                    {edu.year}
+                  </p>
+                  <p className="text-xs md:text-sm text-gray-400 mt-2">
+                    {edu.description}
+                  </p>
+                  <p className="text-xs md:text-sm text-gray-400 mt-2">
+                    {edu.description1}
+                  </p>
                 </motion.div>
               ))}
             </div>
@@ -345,20 +321,20 @@ const About = () => {
                 >
                   {edu.image && (
                     <div className="absolute top-4 right-4">
-                      <Image 
-                        src={edu.image} 
+                      <Image
+                        src={edu.image}
                         alt={""}
-                        width={40} 
-                        height={40} 
+                        width={40}
+                        height={40}
                         className="object-contain opacity-100 hover:opacity-100 transition-opacity"
                       />
                     </div>
                   )}
-        
+
                   <h3 className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
                     {edu.institution}
                   </h3>
-        
+
                   <p className="text-sm md:text-lg font-semibold text-gray-200 mt-2">
                     {edu.degree}
                   </p>
@@ -370,80 +346,6 @@ const About = () => {
                   </p>
                 </motion.div>
               ))}
-            </div>
-          )}
-
-          {activeTab === "certificates" && (
-            <div className="container mx-auto px-2 md:px-4">
-              <div className="text-center mb-8 md:mb-12">
-                <h2 className="text-2xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400 mb-2 md:mb-4">
-                  Professional Certifications
-                </h2>
-                <p className="text-xs md:text-base text-gray-400 max-w-2xl mx-auto">
-                  Showcasing my continuous learning and professional development through verified certifications.
-                </p>
-              </div>
-    
-              <div className="flex overflow-x-auto space-x-3 md:space-x-6 pb-4 md:pb-8 scrollbar-hide">
-                {certificates.map((cert, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, scale: 0.95 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ 
-                      delay: index * 0.2,
-                      type: "spring",
-                      stiffness: 100
-                    }}
-                    className="bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl p-4 md:p-6 
-                              hover:from-gray-700 hover:to-gray-800 
-                              transition-all duration-300 
-                              border border-gray-700 
-                              min-w-[280px] md:min-w-[320px] 
-                              max-w-[400px] 
-                              flex-shrink-0 
-                              shadow-lg 
-                              hover:shadow-xl 
-                              transform hover:-translate-y-2
-                              animate-[scroll_24s_linear_infinite]"
-                  >
-                    <div className="flex items-center mb-2 md:mb-4">
-                    <Award 
-                      className="text-indigo-400 mr-2 md:mr-3" 
-                      size={isMobile ? 24 : 32} 
-                    />
-                      <h3 className="text-base md:text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400">
-                        {cert.institution}
-                      </h3>
-                    </div>
-                    <a href={cert.link} target="blank">
-                      <div className="relative mb-2 md:mb-4 h-32 md:h-48 w-full overflow-hidden rounded-lg">
-                        <Image
-                          src={cert.image}
-                          alt={cert.institution}
-                          layout="fill"
-                          objectFit="cover"
-                          className="transition-transform duration-300 hover:scale-110"
-                        />
-                      </div>
-      
-                      <div className="space-y-1 md:space-y-2">
-                        <p className="text-sm md:text-lg font-semibold text-gray-200">
-                          {cert.degree}
-                        </p>
-                        <p className="text-xs md:text-sm text-gray-400">
-                          {cert.description}
-                        </p>
-                        {cert.issueDate && (
-                          <div className="text-[10px] md:text-xs text-gray-500 mt-1">
-                            Issued: {cert.issueDate}
-                          </div>
-                        )}
-                      </div>
-                    </a>
-                  </motion.div>
-                ))}
-              </div>
             </div>
           )}
         </div>

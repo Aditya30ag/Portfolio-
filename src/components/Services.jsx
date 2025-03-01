@@ -18,6 +18,12 @@ const Services = () => {
       "description": "A comprehensive platform designed for farmers and agribusinesses, Agro-Safal provides tools and resources to improve crop management, access market insights, and enhance productivity through innovative agricultural solutions."
     },
     {
+      "name": "Zenith Pay",
+      "icon": "/images/Screenshot 2025-02-26 003307.png",
+      "link": "https://github.com/Aditya30ag/ChatRoom",
+      "description": "the next-gen digital payment solution! Building a secure, intelligent, and location-aware UPI-based payment system with advanced transaction analytics & fraud prevention or recover fraud Amount. 🔐 Key Features: ✅ User Authentication & Security – OTP login, biometric authentication for maximum protection. ✅ Seamless UPI Payments – Instant, hassle-free transactions. ✅ Geo-Tracking of Transactions   "
+    },
+    {
       "name": "Emotion Detector",
       "icon": "/images/Screenshot 2024-11-21 195313.png",
       "link": "https://github.com/Aditya30ag/FIleCompressor",
@@ -102,14 +108,12 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="relative py-8 md:py-16 lg:py-20 px-4 md:px-8 lg:px-20 overflow-hidden bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20"
-      style={{
-        background: 'linear-gradient(to bottom, rgb(3, 7, 18), rgb(17, 24, 39))',
-      }}
+      className="relative py-8 md:py-16 lg:py-20 px-4 md:px-8 lg:px-20 overflow-hidden "
+      
     >
       <style>{styles}</style>
 
-      <div className="absolute inset-0 opacity-5 overflow-hidden bg-gradient-to-br from-blue-900/20 via-green-900/20 to-indigo-900/20">
+      <div className="absolute inset-0 opacity-5 overflow-hidden">
       </div>
       
       <div className="hidden md:block">

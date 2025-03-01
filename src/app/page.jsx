@@ -11,6 +11,7 @@ import { motion, useScroll, useSpring } from 'framer-motion';
 import Slider from "@/components/Slider";
 import Wave from "@/components/Wave";
 import { useEffect } from "react";
+import Certificates from "@/components/Certificates";
 
 export default function Home() {
   const publicPath = process.env.NEXT_PUBLIC_PUBLIC_PATH;
@@ -93,6 +94,7 @@ export default function Home() {
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       > */}
+      <Certificates/>
         <Services/>
       {/* </motion.section> */}
 
