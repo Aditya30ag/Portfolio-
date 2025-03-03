@@ -47,7 +47,7 @@ const Services = () => {
       id="services"
       className="relative py-8 sm:py-12 md:py-16 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-16 xl:px-24 overflow-hidden"
     >
-      {/* Background effects - optimized for mobile */}
+      {/* Background effects */}
       <div className="absolute inset-0 opacity-5 overflow-hidden"></div>
       
       <div className="absolute inset-0 z-0 overflow-hidden">
@@ -64,12 +64,11 @@ const Services = () => {
           <span className="absolute bottom-[-0.5rem] sm:bottom-[-0.7rem] left-1/2 transform -translate-x-1/2 w-32 sm:w-40 md:w-48 lg:w-64 h-1 bg-gradient-to-r from-[#6366F1] to-[#F43F5E] rounded-full" />
         </h1>
 
-        {/* Modified grid: 2 cards per row on mobile, 2 on tablet, 3 on desktop */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 lg:gap-10">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-gray-900 border border-gray-800 rounded-xl shadow-lg hover:shadow-[#6366F1_-4px_6px_0px_2px] transition-all duration-300 hover:-translate-y-2 h-full flex flex-col"
+              className="relative rounded-xl h-full flex flex-col"
               style={{ 
                 animationName: 'fadeIn',
                 animationDuration: '0.5s',
@@ -80,38 +79,45 @@ const Services = () => {
                 transform: 'translateY(20px)'
               }}
             >
-              <div className="relative h-24 sm:h-32 md:h-40 lg:h-44 w-full flex items-center justify-center p-3 sm:p-4 border-b border-gray-800">
-                <div className="relative w-full h-full">
-                  <Image
-                    src={publicPath + service.icon}
-                    alt={service.name}
-                    fill
-                    className="object-contain transition-transform duration-300 hover:scale-105"
-                    sizes="(max-width: 640px) 45vw, (max-width: 1024px) 45vw, 30vw"
-                  />
+              {/* Gradient border effect */}
+              <div className="absolute inset-0 rounded-xl p-[2px] bg-gradient-to-br from-indigo-500 via-purple-500 to-blue-500 opacity-70 blur-[1px]"></div>
+              
+              {/* Card content */}
+              <div className="relative bg-gray-900 rounded-xl h-full flex flex-col z-10 overflow-hidden transition-all duration-300 hover:-translate-y-2">
+                {/* Larger image container */}
+                <div className="relative h-36 sm:h-44 md:h-48 lg:h-56 w-full border-b border-gray-800">
+                  <div className="relative w-full h-full">
+                    <Image
+                      src={publicPath + service.icon}
+                      alt={service.name}
+                      fill
+                      className="object-cover transition-transform duration-300 hover:scale-105"
+                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 45vw, 30vw"
+                    />
+                  </div>
                 </div>
-              </div>
 
-              <div className="p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col flex-grow">
-                <h3 className="mb-1 sm:mb-2 text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
-                  {service.name}
-                </h3>
-                <p className="mb-3 sm:mb-4 text-xs sm:text-sm md:text-base text-gray-400 flex-grow line-clamp-3 sm:line-clamp-4">
-                  {service.description}
-                </p>
+                <div className="p-3 sm:p-4 md:p-5 lg:p-6 flex flex-col flex-grow">
+                  <h3 className="mb-1 sm:mb-2 text-sm sm:text-base md:text-lg lg:text-xl font-bold text-white">
+                    {service.name}
+                  </h3>
+                  <p className="mb-3 sm:mb-4 text-xs sm:text-sm md:text-base text-gray-400 flex-grow line-clamp-3 sm:line-clamp-4">
+                    {service.description}
+                  </p>
 
-                <div className="flex justify-between items-center pt-2 sm:pt-3 border-t border-gray-800 mt-auto">
-                  <button className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-white bg-transparent border border-[#6366F1] rounded-md hover:bg-[#6366F1] transition-colors">
-                    Demo
-                  </button>
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-white bg-[#6366F1] rounded-md hover:bg-[#8B5CF6] transition-colors cursor-pointer"
-                  >
-                    Get Code
-                  </a>
+                  <div className="flex justify-between items-center pt-2 sm:pt-3 border-t border-gray-800 mt-auto">
+                    <button className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-white bg-transparent border border-[#6366F1] rounded-md hover:bg-[#6366F1] transition-colors">
+                      Demo
+                    </button>
+                    <a
+                      href={service.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="px-2 py-1 sm:px-3 sm:py-1.5 md:px-4 md:py-2 text-xs md:text-sm font-medium text-white bg-[#6366F1] rounded-md hover:bg-[#8B5CF6] transition-colors cursor-pointer"
+                    >
+                      Get Code
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,6 +135,12 @@ const Services = () => {
           0% { opacity: 0.3; transform: scale(0.95); }
           50% { opacity: 0.5; transform: scale(1); }
           100% { opacity: 0.3; transform: scale(0.95); }
+        }
+        
+        @keyframes borderGlow {
+          0% { opacity: 0.5; }
+          50% { opacity: 0.8; }
+          100% { opacity: 0.5; }
         }
       `}</style>
     </section>
