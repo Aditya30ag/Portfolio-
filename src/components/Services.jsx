@@ -23,10 +23,10 @@ const Services = () => {
       "description": "The next-gen digital payment solution! Building a secure, intelligent, and location-aware UPI-based payment system with advanced transaction analytics & fraud prevention or recover fraud Amount."
     },
     {
-      "name": "Emotion Detector",
-      "icon": "/images/Screenshot 2024-11-21 195313.png",
-      "link": "https://github.com/Aditya30ag/FIleCompressor",
-      "description": "Uses images or video to analyze facial expressions and detect emotions like happiness, sadness, anger, etc. Uses machine learning models or algorithms (e.g., neural networks, SVMs) trained on labeled emotional data."
+      "name": "Baymax",
+      "icon": "/images/Untitled design.png",
+      "link": "https://github.com/Aditya30ag/ChatRoom",
+      "description": "I contributed to the development of a Mental Health Management Chat Application, designed to help users monitor and manage their mental well-being. The app uses a conversational interface powered by a chatbot, where users can interact and log their emotional states. My role involved creating the frontend using React.js and Tailwind CSS, ensuring a smooth, responsive, and intuitive user experience.The app features sentiment analysis to detect signs of anxiety, depression, and other mental health conditions. Using FastAPI as the backend, I developed RESTful APIs for processing user inputs, performing sentiment analysis, and generating real-time mood-tracking reports. I also integrated machine learning models for condition detection, providing users with personalized feedback based on their emotional responses."
     },
     {
       "name": "Laundry Management System",
