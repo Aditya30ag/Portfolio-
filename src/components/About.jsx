@@ -143,8 +143,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-10 md:py-20 relative overflow-hidden flex justify-center items-center"
-      style={{ zIndex: "200" }}
+      className="py-10 md:py-20 h-full relative overflow-hidden flex justify-center items-center"
     >
       {/* Background gradient and gooey elements remain the same */}
       <div className="line-bg">

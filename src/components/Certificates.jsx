@@ -62,7 +62,7 @@ const Certificates = () => {
       description: "Click !!",
     },
     {
-      institution: "Tech Arena (Bennett University)",
+      institution: "Tech Arena (Bennett University) 2nd Rank",
       image: "/images/Screenshot_1-3-2025_82652_.jpeg",
       year: "2024",
       description: "Click !!",
@@ -89,7 +89,6 @@ const Certificates = () => {
     <section
       id="about"
       className="py-10 md:py-20 relative overflow-hidden flex justify-center items-center"
-      style={{ zIndex: "200" }}
     >
       <style jsx global>{`
         @keyframes scroll {

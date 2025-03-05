@@ -16,8 +16,8 @@
   #1cac78,   /* Chartreuse */
   #4fffb0     /* Bright Green */ 
   );
-  --primary: #0024d6;
-  --primary-accent:#4364F7;
+  --primary: #8295f3;
+  --primary-accent:#758bf1;
   --destructive: #7f1d1d;
   --warning:#ffa500;
   --transition:all 400ms ease;
