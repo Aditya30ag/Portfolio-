@@ -11,7 +11,7 @@ const SocialHandles = () => {
     {
       name: "LinkedIn",
       icon: <Linkedin />,
-      link: "https://www.linkedin.com/in/aditya-agrawal-527150303/",
+      link: "https://www.linkedin.com/in/aditya-a-527150303?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Buh6JvriVRJaua8NOLXKXzw%3D%3D",
     },
     {
       name: "YouTube",
